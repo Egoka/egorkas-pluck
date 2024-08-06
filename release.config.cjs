@@ -84,8 +84,8 @@ const config = {
     [
       "@semantic-release/git",
       {
-        assets: ["CHANGELOG.md", "package.json"],
-        message: "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        assets: ["CHANGELOG.md", "package.json", "lib/package.json"],
+        message: "release(${nextRelease.version}) ${nextRelease.notes}"
       }
     ],
     [
