@@ -78,7 +78,7 @@ const config = {
     [
       '@semantic-release/npm',
       {
-        pkgRoot: 'dist'
+        pkgRoot: 'lib'
       }
     ],
     [
