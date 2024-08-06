@@ -1,1 +1,1 @@
-export const log = (value?: string) => console.log(value ?? "Work project!")
+export const log = (value?: string) => console.log(value ?? "Work project")
