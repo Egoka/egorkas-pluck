@@ -1,0 +1,14 @@
+{
+  "name": "@egorkas/pluck",
+  "version": "0.0.1",
+  "private": false,
+  "author": "Egor Bondarenco",
+  "homepage": "https://github.com/Egoka/egorkas-pluck#readme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Egoka/egorkas-pluck/issues"
+  },
+  "keywords": [
+    "npm"
+  ]
+}
