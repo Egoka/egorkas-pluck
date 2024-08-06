@@ -7,7 +7,7 @@ describe("Testing lib", () => {
     expect(logSpy).toHaveBeenCalledWith("Work project hello")
     logSpy.mockRestore()
   })
-  it("log add value", () => {
+  it("log add value!", () => {
     const logSpy = vi.spyOn(console, "log")
     log("test text")
     expect(logSpy).toHaveBeenCalledWith("test text")
