@@ -17,7 +17,12 @@ jobs:
         with:
           node-version: '20'
       - run: npm ci
-      - run: npm run build:lib
+      - name: Lint library
+        run: npm run lint
+      - name: Build library
+        run: npm run build:lib
+      - name: Test library
+        run: npm run test
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
