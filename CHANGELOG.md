@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## [1.1.1](https://github.com/Egoka/egorkas-pluck/compare/v1.1.0...v1.1.1) (2024-08-07)
+
 ## [1.1.1-next.2](https://github.com/Egoka/egorkas-pluck/compare/v1.1.1-next.1...v1.1.1-next.2) (2024-08-06)
 
 ## [1.1.1-next.1](https://github.com/Egoka/egorkas-pluck/compare/v1.1.0...v1.1.1-next.1) (2024-08-06)
