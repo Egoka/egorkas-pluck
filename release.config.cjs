@@ -44,36 +44,36 @@ const config = {
         },
       },
     ],
-    // [
-    //   "@semantic-release/release-notes-generator",
-    //   {
-    //     preset: "angular",
-    //     writerOpts: {
-    //       commitsSort: ['subject', 'scope'],
-    //     },
-    //     presetConfig: {
-    //       types: [
-    //         {type: 'feat', section: 'Features', hidden: false},
-    //         {type: 'fix', section: 'Bug Fixes', hidden: false},
-    //         {type: 'chore', section: 'Chores', hidden: true},
-    //         {type: 'docs', section: 'Documentation', hidden: false},
-    //         {type: 'style', section: 'Styles', hidden: false},
-    //         {type: 'refactor', section: 'Code Refactoring', hidden: false},
-    //         {type: 'perf', section: 'Performance Improvements', hidden: false},
-    //         {type: 'test', section: 'Tests', hidden: false},
-    //         {type: 'build', section: 'Build System', hidden: false},
-    //         {type: 'ci', section: 'Continuous Integration', hidden: false},
-    //         {type: 'revert', section: 'Reverts', hidden: false},
-    //       ],
-    //     },
-    //   }
-    // ],
-    // [
-    //   '@semantic-release/npm',
-    //   {
-    //     pkgRoot: 'lib'
-    //   }
-    // ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        preset: "angular",
+        writerOpts: {
+          commitsSort: ['subject', 'scope'],
+        },
+        presetConfig: {
+          types: [
+            {type: 'feat', section: 'Features', hidden: false},
+            {type: 'fix', section: 'Bug Fixes', hidden: false},
+            {type: 'chore', section: 'Chores', hidden: true},
+            {type: 'docs', section: 'Documentation', hidden: false},
+            {type: 'style', section: 'Styles', hidden: false},
+            {type: 'refactor', section: 'Code Refactoring', hidden: false},
+            {type: 'perf', section: 'Performance Improvements', hidden: false},
+            {type: 'test', section: 'Tests', hidden: false},
+            {type: 'build', section: 'Build System', hidden: false},
+            {type: 'ci', section: 'Continuous Integration', hidden: false},
+            {type: 'revert', section: 'Reverts', hidden: false},
+          ],
+        },
+      }
+    ],
+    [
+      '@semantic-release/npm',
+      {
+        pkgRoot: 'lib'
+      }
+    ],
     // [
     //   '@semantic-release/changelog',
     //   {
