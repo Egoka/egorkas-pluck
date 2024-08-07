@@ -35,11 +35,6 @@ jobs:
       - name: Check status
         run: |
           gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
-          gh pr checks lib
-      - name: Check status
-        run: |
-          gh auth login --with-token <<< "${{ secrets.PAT_TOKEN }}"
-          gh pr checks lib
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
