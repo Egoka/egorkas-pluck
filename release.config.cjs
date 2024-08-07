@@ -5,6 +5,7 @@
 const config = {
   branches: [
     "lib", // Основная ветка для стабильных релизов
+    "test",
     {
       name: "library/next", // Ветка для следующей версии
       prerelease: "next" // Включает предварительные версии с префиксом next, например, 1.0.0-next.1
@@ -71,7 +72,7 @@ const config = {
     [
       '@semantic-release/npm',
       {
-        pkgRoot: 'lib'
+        pkgRoot: 'dist'
       }
     ],
     // [
