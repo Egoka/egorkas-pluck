@@ -46,12 +46,6 @@ const config = {
       },
     ],
     [
-      '@semantic-release/npm',
-      {
-        pkgRoot: 'dist'
-      }
-    ],
-    [
       "@semantic-release/release-notes-generator",
       {
         preset: "angular",
@@ -73,6 +67,12 @@ const config = {
             {type: 'revert', section: 'Reverts', hidden: false},
           ],
         },
+      }
+    ],
+    [
+      '@semantic-release/npm',
+      {
+        pkgRoot: 'dist'
       }
     ],
     // [
