@@ -41,3 +41,7 @@ jobs:
           GIT_COMMITTER_NAME: "Egoka"
           GIT_COMMITTER_EMAIL: "eg.bonda2014@gmail.com"
         run: npx semantic-release
+      - name: Get release version
+        if: steps.release.outputs.new_release_published == 'true'
+        run:
+          echo "Release version: ${{ steps.release.outputs.new_release_version }}"
