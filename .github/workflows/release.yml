@@ -34,7 +34,7 @@ jobs:
         run: pnpm test
       - name: Check status
         run: |
-          gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
+          gh auth login --with-token <<< "${{ secrets.PAT_TOKEN }}"
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
