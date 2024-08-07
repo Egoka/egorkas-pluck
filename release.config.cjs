@@ -101,6 +101,12 @@ const config = {
         addReleases: 'bottom',
       },
     ],
+    [
+      "@semantic-release/exec",
+      {
+        "publishCmd": "echo \"VERSION=${nextRelease.version}\" >> version.env",
+      }
+    ],
   ]
 }
 
