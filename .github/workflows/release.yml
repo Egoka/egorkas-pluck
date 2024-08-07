@@ -57,6 +57,6 @@ jobs:
           GIT_COMMITTER_NAME: "Egoka"
           GIT_COMMITTER_EMAIL: "eg.bonda2014@gmail.com"
         run: |
-          git add .A
+          git add -A
           git commit -m "release(${{ env.VERSION }}): [skip ci]"
           git push origin ${{ env.BRANCH_NAME }}
