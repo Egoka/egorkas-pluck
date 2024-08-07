@@ -41,6 +41,11 @@ jobs:
           GIT_COMMITTER_NAME: "Egoka"
           GIT_COMMITTER_EMAIL: "eg.bonda2014@gmail.com"
         run: npx semantic-release
-      - name: Diss git
+      - name: Read version from package.json
+        id: read_version
         run: |
-          echo git diff
+          VERSION=$(jq -r '.version' lib/package.json)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Print version
+        run: echo "The current version is ${{ env.VERSION }}"
