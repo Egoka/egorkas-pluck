@@ -28,6 +28,10 @@ jobs:
         run: npm run build:lib
       - name: Test library
         run: npm run test
+      - name: Set Git author
+        run: |
+          git config --global user.name "Egoka"
+          git config --global user.email "eg.bonda2014@gmail.com"
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
