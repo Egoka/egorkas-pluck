@@ -32,9 +32,17 @@ jobs:
         run: pnpm build:lib
       - name: Test library
         run: pnpm test
+      - name: Check status
+        run: |
+          gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
+          gh pr checks lib
+      - name: Check status
+        run: |
+          gh auth login --with-token <<< "${{ secrets.PAT_TOKEN }}"
+          gh pr checks lib
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GIT_AUTHOR_NAME: "Egoka"
           GIT_AUTHOR_EMAIL: "eg.bonda2014@gmail.com"
