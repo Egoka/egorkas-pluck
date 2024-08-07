@@ -76,25 +76,25 @@ const config = {
       }
     ],
     [
-      '@semantic-release/changelog',
-      {
-        changelogFile: 'CHANGELOG.md',
-        changelogTitle: '# CHANGELOG'
-      }
-    ],
-    [
       '@semantic-release/npm',
       {
         pkgRoot: 'lib'
       }
     ],
-    [
-      "@semantic-release/git",
-      {
-        assets: ["CHANGELOG.md", "package.json", "lib/package.json"],
-        message: "release(${nextRelease.version}): [skip ci]\n\n${nextRelease.notes}"
-      }
-    ],
+    // [
+    //   '@semantic-release/changelog',
+    //   {
+    //     changelogFile: 'CHANGELOG.md',
+    //     changelogTitle: '# CHANGELOG'
+    //   }
+    // ],
+    // [
+    //   "@semantic-release/git",
+    //   {
+    //     assets: ["CHANGELOG.md", "package.json", "lib/package.json"],
+    //     message: "release(${nextRelease.version}): [skip ci]\n\n${nextRelease.notes}"
+    //   }
+    // ],
     [
       '@semantic-release/github',
       {
