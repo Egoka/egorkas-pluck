@@ -17,7 +17,11 @@ jobs:
       id-token: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PAT_TOKEN }}
       - uses: pnpm/action-setup@v2
         with:
           version: 9.6.0
@@ -46,9 +50,6 @@ jobs:
         run: |
           VERSION=$(jq -r '.version' lib/package.json)
           echo "VERSION=$VERSION" >> $GITHUB_ENV
-
-      - name: Print version
-        run: echo "The current version is ${{ env.VERSION }}"
       - name: Commit and push changes
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
