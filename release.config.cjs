@@ -104,7 +104,7 @@ const config = {
     [
       "@semantic-release/exec",
       {
-        "publishCmd": "cd lib && npm version  ${nextRelease.version} && git add package.json && git commit -m \"release( ${nextRelease.version}): [skip ci]\" && git push origin ${branch.name}",
+        "publishCmd": "cd lib && npm version  ${nextRelease.version} && git add package.json",
       }
     ],
   ]

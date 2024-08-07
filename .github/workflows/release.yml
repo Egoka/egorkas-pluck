@@ -41,3 +41,6 @@ jobs:
           GIT_COMMITTER_NAME: "Egoka"
           GIT_COMMITTER_EMAIL: "eg.bonda2014@gmail.com"
         run: npx semantic-release
+      - name: Diss git
+        run: |
+          echo git diff
