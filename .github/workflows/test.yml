@@ -15,10 +15,9 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.PAT_TOKEN }}
-
-      - name: Add date to CHANGELOG
-        run: |
-          echo "$(date)" >> CHANGELOG.md
+      - run: pnpm install --frozen-lockfile
+      - name: Build library
+        run: pnpm build:lib
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
@@ -28,6 +27,9 @@ jobs:
           GIT_COMMITTER_NAME: "Egoka"
           GIT_COMMITTER_EMAIL: "eg.bonda2014@gmail.com"
         run: npx semantic-release
+      - name: Add date to CHANGELOG
+        run: |
+          echo "$(date)" >> CHANGELOG.md
       - name: Commit and push changes
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
