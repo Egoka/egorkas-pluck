@@ -41,11 +41,3 @@ jobs:
           GIT_COMMITTER_NAME: "Egoka"
           GIT_COMMITTER_EMAIL: "eg.bonda2014@gmail.com"
         run: npx semantic-release
-
-      - name: Read version from .VERSION
-        id: read_version
-        run: echo "VERSION=$(cat .VERSION)" >> $GITHUB_ENV
-
-      - name: Add version to CHANGELOG
-        run: echo "${{ env.VERSION }}" >> CHANGELOG.md
-
