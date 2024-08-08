@@ -45,16 +45,16 @@ jobs:
           GIT_COMMITTER_NAME: "Egoka"
           GIT_COMMITTER_EMAIL: "eg.bonda2014@gmail.com"
         run: npx semantic-release
-      - name: Read version from package.json
-        id: read_version
-        run: |
-          VERSION=$(jq -r '.version' lib/package.json)
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-      - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git commit -m "release(${{ env.VERSION }}): [skip ci]"
-          git push origin ${{ env.BRANCH_NAME }}
+#      - name: Read version from package.json
+#        id: read_version
+#        run: |
+#          VERSION=$(jq -r '.version' lib/package.json)
+#          echo "VERSION=$VERSION" >> $GITHUB_ENV
+#      - name: Commit and push changes
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+#        run: |
+#          git config --global user.name 'github-actions[bot]'
+#          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+#          git commit -m "release(${{ env.VERSION }}): [skip ci]"
+#          git push origin ${{ env.BRANCH_NAME }}

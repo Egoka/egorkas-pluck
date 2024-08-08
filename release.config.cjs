@@ -81,13 +81,13 @@ const config = {
         changelogTitle: '# CHANGELOG'
       }
     ],
-    // [
-    //   "@semantic-release/git",
-    //   {
-    //     assets: ["CHANGELOG.md", "package.json", "lib/package.json"],
-    //     message: "release(${nextRelease.version}): [skip ci]\n\n${nextRelease.notes}"
-    //   }
-    // ],
+    [
+      "@semantic-release/git",
+      {
+        assets: ["CHANGELOG.md", "package.json", "lib/package.json"],
+        message: "release(${nextRelease.version}): [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
     [
       '@semantic-release/github',
       {
