@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - lib
+      - library/next
+      - library/beta
+      - library/dev
 jobs:
   test:
     runs-on: ubuntu-latest

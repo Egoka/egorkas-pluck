@@ -15,7 +15,7 @@ const config = {
       channel: "beta" // Публикация на beta канал
     },
     {
-      name: "library/develop", // Ветка для разработки
+      name: "library/dev", // Ветка для разработки
       prerelease: "alpha" // Включает предварительные версии с префиксом alpha, например, 1.0.0-alpha.1
     }
   ],
@@ -85,7 +85,7 @@ const config = {
       "@semantic-release/git",
       {
         assets: ["CHANGELOG.md", "package.json", "lib/package.json"],
-        message: "release(${nextRelease.version}): [skip ci]\n\n${nextRelease.notes}"
+        message: "release(${nextRelease.version}): [skip ci]"
       }
     ],
     [
@@ -104,7 +104,8 @@ const config = {
     [
       "@semantic-release/exec",
       {
-        "publishCmd": "cd lib && npm version  ${nextRelease.version} && git add package.json",
+        "prepareCmd": "cd lib && npm version ${nextRelease.version} && git add package.json",
+        "addChannelCmd": "cd lib && npm version ${nextRelease.version} && git add package.json",
       }
     ],
   ]
