@@ -85,7 +85,6 @@ const config = {
       "@semantic-release/exec",
       {
         "prepareCmd": "cd lib && npm version ${nextRelease.version} && git add package.json",
-        "addChannelCmd": "cd lib && npm version ${nextRelease.version} && git add package.json",
       }
     ],
     [
