@@ -11,15 +11,19 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: pnpm/action-setup@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
           version: 9.6.0
-      - uses: actions/setup-node@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: '20'
           cache: "pnpm"
-      - run: pnpm install --frozen-lockfile
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       - name: Lint library
         run: pnpm lint
       - name: Test library
