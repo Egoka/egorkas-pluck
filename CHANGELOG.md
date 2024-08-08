@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.1.19](https://github.com/Egoka/egorkas-pluck/compare/v1.1.18...v1.1.19) (2024-08-08)
+
+
+### Bug Fixes
+
+* **update:** update ([e91cd00](https://github.com/Egoka/egorkas-pluck/commit/e91cd00afaf4a58954f1346a3f6e411a07ae11a6))
+
 ## [1.1.18](https://github.com/Egoka/egorkas-pluck/compare/v1.1.17...v1.1.18) (2024-08-08)
 
 ## [1.1.17](https://github.com/Egoka/egorkas-pluck/compare/v1.1.16...v1.1.17) (2024-08-08)
