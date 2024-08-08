@@ -82,6 +82,13 @@ const config = {
       }
     ],
     [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "cd lib && npm version ${nextRelease.version} && git add package.json",
+        "addChannelCmd": "cd lib && npm version ${nextRelease.version} && git add package.json",
+      }
+    ],
+    [
       "@semantic-release/git",
       {
         assets: ["CHANGELOG.md", "package.json", "lib/package.json"],
@@ -100,13 +107,6 @@ const config = {
         releasedLabels: ['released'],
         addReleases: 'bottom',
       },
-    ],
-    [
-      "@semantic-release/exec",
-      {
-        "prepareCmd": "cd lib && npm version ${nextRelease.version} && git add package.json",
-        "addChannelCmd": "cd lib && npm version ${nextRelease.version} && git add package.json",
-      }
     ],
   ]
 }
